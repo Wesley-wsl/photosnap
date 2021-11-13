@@ -14,6 +14,11 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 `;
 
 export const MainButton = styled.button`
@@ -23,7 +28,24 @@ export const MainButton = styled.button`
     display: flex;
     align-items: center;
     font-weight: 600;
-    img {
+    transition: text-decoration 0.4s linear;
+    position: relative;
+
+    svg {
         margin-left: 1.3rem;
+    }
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 0.07rem;
+        position: absolute;
+        bottom: -0.1rem;
+        background-color: #d9d9d9d9;
+        transition: width 0.2s ease-in;
+    }
+
+    &:hover:after {
+        width: 6rem;
     }
 `;
