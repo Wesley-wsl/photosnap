@@ -8,11 +8,31 @@ export const Container = styled.footer`
     grid-template-columns: 1fr 1fr 1fr;
     padding: 4rem;
 
+    @media (max-width: 860px) {
+        grid-template-columns: 1fr 1fr;
+        height: 20rem;
+    }
+
+    @media (max-width: 660px) {
+        grid-template-columns: 1fr;
+        height: 27rem;
+    }
+
     .socialMedias {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-left: 3rem;
+
+        @media (max-width: 660px) {
+            margin: 0;
+            > img {
+                margin-bottom: 2rem;
+            }
+            ul > li {
+                margin-bottom: 2rem;
+            }
+        }
         > img {
             width: 11rem;
             cursor: pointer;
@@ -52,6 +72,11 @@ export const Container = styled.footer`
         margin-right: 4rem;
         p {
             color: #d9d9d989;
+        }
+
+        @media (max-width: 860px) {
+            margin-top: 2rem;
+            gap: 2rem;
         }
     }
 

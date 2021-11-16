@@ -10,6 +10,11 @@ export const Intro = styled.section`
     height: 40rem;
     padding-left: 6rem;
 
+    @media (max-width: 601px) {
+        padding-left: 1rem;
+        font-size: 0.9rem;
+    }
+
     p:nth-child(1) {
         padding-top: 6rem;
         margin-bottom: 2rem;
@@ -21,6 +26,12 @@ export const Intro = styled.section`
         text-transform: uppercase;
         letter-spacing: 0.4rem;
         max-width: 25rem;
+
+        @media (max-width: 601px) {
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
+            margin-bottom: 1rem;
+        }
     }
 
     p:nth-child(3) {

@@ -4,6 +4,11 @@ export const Container = styled.main`
     section:nth-child(1) {
         background-color: #000;
         color: #fff;
+        @media (max-width: 768px) {
+            &::before {
+                display: none;
+            }
+        }
 
         &::before {
             content: "";
@@ -26,6 +31,9 @@ export const Container = styled.main`
     }
 
     section:nth-child(2) {
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
         .underlineWhite {
             &:hover:after {
                 width: 7.6rem;
@@ -47,6 +55,17 @@ export const AboutPhotosnap = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+
+        .photography {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 10rem;
+            }
+        }
+    }
 
     div {
         margin-bottom: -0.4rem;
@@ -55,7 +74,9 @@ export const AboutPhotosnap = styled.section`
     .photography {
         max-width: 46rem;
         img {
-            width: 100%;
+            max-width: 100%;
+            height: 35.5rem;
+            object-fit: cover;
         }
     }
 `;
@@ -65,6 +86,11 @@ export const Intro = styled.div`
     flex-direction: column;
     max-width: 25rem;
     margin: 0 auto;
+    margin-left: 2rem;
+    @media (max-width: 768px) {
+        padding: 6rem 0;
+    }
+
     h1 {
         max-width: 23rem;
         font-size: 2.5rem;
@@ -177,6 +203,11 @@ export const Features = styled.section`
     justify-content: space-around;
     max-width: 65rem;
     margin: 9rem auto 7rem auto;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 3rem;
+    }
 
     div {
         display: flex;
