@@ -7,13 +7,14 @@ import embed from "../../assets/features/desktop/embed.svg";
 import heroImage from "../../assets/features/desktop/hero.jpg";
 import noLimit from "../../assets/features/desktop/no-limit.svg";
 import responsive from "../../assets/features/desktop/responsive.svg";
-import { MainButton } from "../../styles/GlobalStyle";
-import { EndFeatures, IntroFeatures, FeaturesContent } from "./styles";
+import Beta from "../../components/Beta";
+import { IntroPage } from "../../styles/GlobalStyle";
+import { FeaturesContent } from "./styles";
 
 const Features: React.FC = () => {
     return (
         <main>
-            <IntroFeatures>
+            <IntroPage>
                 <div>
                     <h1>Features</h1>
                     <p>
@@ -26,7 +27,7 @@ const Features: React.FC = () => {
                 <div>
                     <img src={heroImage} alt="hero img" />
                 </div>
-            </IntroFeatures>
+            </IntroPage>
 
             <FeaturesContent>
                 <div>
@@ -81,24 +82,7 @@ const Features: React.FC = () => {
                 </div>
             </FeaturesContent>
 
-            <EndFeatures>
-                <h2>
-                    WE&apos;RE IN BETA. <br /> GET YOUR INVITE <br />
-                    TODAY!
-                </h2>
-                <MainButton type="button">
-                    Get An Invite{" "}
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="43"
-                        height="14"
-                    >
-                        <g fill="none" fillRule="evenodd" stroke="#fff">
-                            <path d="M0 7h41.864M35.428 1l6 6-6 6" />
-                        </g>
-                    </svg>
-                </MainButton>
-            </EndFeatures>
+            <Beta />
         </main>
     );
 };
