@@ -16,6 +16,7 @@ export const InfoPricing = styled.section`
         width: 4rem;
         height: 2rem;
         -webkit-appearance: none;
+        cursor: pointer;
         background: #c6c6c6;
         outline: none;
         border-radius: 20px;
