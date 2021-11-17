@@ -5,7 +5,6 @@ import hero from "../../assets/pricing/desktop/hero.jpg";
 import Beta from "../../components/Beta";
 import { IntroPage } from "../../styles/GlobalStyle";
 import { Compare, InfoPricing } from "./styles";
-// import { Container } from './styles';
 
 const Pricing: React.FC = () => {
     const [yearly, setyearly] = useState(false);
@@ -99,8 +98,6 @@ const Pricing: React.FC = () => {
                                 $99.00 <span>per month</span>
                             </p>
                         )}
-                        <span>per month</span>
-
                         <button type="button">Pick Plan</button>
                     </div>
                 </div>
